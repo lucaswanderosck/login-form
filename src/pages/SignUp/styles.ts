@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const Logo = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   padding: 42px;
 `;
 
@@ -59,6 +59,6 @@ export const Content = styled.div`
 `;
 
 export const Background = styled.div`
-  background: url(${backgroundImg}) no-repeat center center;
+  background: url(${backgroundImg}) no-repeat left;
   background-size: cover;
 `;

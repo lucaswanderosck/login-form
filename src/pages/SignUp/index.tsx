@@ -7,7 +7,9 @@ import CampIn from "../../assets/camp.in.png";
 import { FiMail, FiLock, FiUser, FiUserPlus } from "react-icons/fi";
 import { Container, Content, Logo, Background } from "./styles";
 
-export const SingUp = () => {
+import { Link } from "react-router-dom";
+
+export const SignUp = () => {
   return (
     <Container>
       <Background />
@@ -27,7 +29,7 @@ export const SingUp = () => {
           <Input Icon={FiLock} title="Senha" placeholder="Digite sua senha" />
           <Button name="cadastrar" />
           <p>
-            <a href="#">Voltar para o login</a>
+            <Link to="/">Voltar para o login</Link>
           </p>
         </form>
       </Content>

@@ -1,6 +1,5 @@
-import { SingIn } from "./pages/SignIn";
-import { SingUp } from "./pages/SignUp";
+import { Routes } from "./routes";
 
 export const App = () => {
-  return <SingUp />;
+  return <Routes />;
 };

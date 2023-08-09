@@ -98,6 +98,6 @@ export const Content = styled.div`
 `;
 
 export const Background = styled.div`
-  background: url(${backgroundImg}) no-repeat center center;
+  background: url(${backgroundImg}) no-repeat right;
   background-size: cover;
 `;

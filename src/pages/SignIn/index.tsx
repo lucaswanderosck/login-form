@@ -7,7 +7,9 @@ import CampIn from "../../assets/camp.in.png";
 import { FiMail, FiLock, FiLogIn } from "react-icons/fi";
 import { Container, Content, Logo, Background } from "./styles";
 
-export const SingIn = () => {
+import { Link } from "react-router-dom";
+
+export const SignIn = () => {
   return (
     <Container>
       <Content>
@@ -34,7 +36,7 @@ export const SingIn = () => {
           </div>
           <Button name="entrar" />
           <p>
-            Não tem conta? <a href="#">Registre-se</a>
+            Não tem conta? <Link to="/register">Registre-se</Link>
           </p>
         </form>
       </Content>
