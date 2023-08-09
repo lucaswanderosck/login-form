@@ -12,4 +12,8 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+a {
+    text-decoration: none;
+}
+
 `;

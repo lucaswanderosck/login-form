@@ -43,45 +43,6 @@ export const Content = styled.div`
       margin-bottom: 24px;
     }
 
-    .remember {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 16px;
-
-      span:first-child {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-
-        > input[type="checkbox"] {
-          width: 20px;
-          height: 20px;
-          border-radius: 4px;
-          border: 1px solid #574c3a;
-          background-color: #efeae2;
-          cursor: pointer;
-        }
-
-        label {
-          color: #574c3a;
-          font-family: Roboto;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
-      }
-
-      span:last-child {
-        a {
-          color: #574c3a;
-          font-family: "Poppins", sans-serif;
-          font-size: 14px;
-          font-weight: 600;
-        }
-      }
-    }
-
     > p {
       color: ${({ theme }) => theme.colors.primaryColor};
       text-align: center;
