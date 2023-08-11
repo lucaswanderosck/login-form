@@ -11,11 +11,24 @@ export const Container = styled.div`
   }
 `;
 
-export const Logo = styled.div`
+export const Header = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   padding: 42px;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    color: ${({ theme }) => theme.colors.textTitle};
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 
   @media (max-width: 481px) {
     padding: 16px;
@@ -31,7 +44,7 @@ export const Content = styled.div`
     border-radius: 4px;
     padding: 60px 100px;
 
-    > h1 {
+    > h2 {
       color: ${({ theme }) => theme.colors.textTitle};
       font-family: "Poppins", sans-serif;
       font-size: 24px;
@@ -40,10 +53,14 @@ export const Content = styled.div`
       display: flex;
       align-items: center;
       gap: 12px;
+
+      svg {
+        color: ${({ theme }) => theme.colors.iconTitle};
+      }
     }
 
-    > h2 {
-      color: ${({ theme }) => theme.colors.primaryColor};
+    > h3 {
+      color: ${({ theme }) => theme.colors.textBase};
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       font-weight: 500;
@@ -62,17 +79,14 @@ export const Content = styled.div`
         gap: 6px;
 
         > input[type="checkbox"] {
-          width: 20px;
-          height: 20px;
-          border-radius: 4px;
-          border: 1px solid #574c3a;
-          background-color: #efeae2;
+          width: 16px;
+          height: 16px;
           cursor: pointer;
         }
 
         label {
-          color: #574c3a;
-          font-family: Roboto;
+          color: ${({ theme }) => theme.colors.textBase};
+          font-family: "Roboto", sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -82,7 +96,7 @@ export const Content = styled.div`
 
       span:last-child {
         a {
-          color: #574c3a;
+          color: ${({ theme }) => theme.colors.buttonLink};
           font-family: "Poppins", sans-serif;
           font-size: 14px;
           font-weight: 600;
@@ -91,14 +105,14 @@ export const Content = styled.div`
     }
 
     > p {
-      color: ${({ theme }) => theme.colors.primaryColor};
+      color: ${({ theme }) => theme.colors.buttonLink};
       text-align: center;
       margin-top: 14px;
       font-family: "Poppins", sans-serif;
       font-size: 14px;
 
       > a {
-        color: ${({ theme }) => theme.colors.primaryColor};
+        color: ${({ theme }) => theme.colors.buttonLink};
         font-weight: bold;
       }
     }

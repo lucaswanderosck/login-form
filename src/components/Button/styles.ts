@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.button`
     width: 100%;
     padding: 12px 24px;
-    background-color: ${({theme}) => theme.colors.primaryColor};
-    color: ${({theme}) => theme.colors.textBase};
+    background-color: ${({theme}) => theme.colors.buttonLink};
+    color: ${({theme}) => theme.colors.textButton};
     border: none;
     border-radius: 4px;
     cursor: pointer;

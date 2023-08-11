@@ -1,28 +1,50 @@
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
-import Vector from "../../assets/Vector 2 (1).png";
-import CampIn from "../../assets/camp.in.png";
+import themeDark from "../../styles/themes/dark";
+
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
 
 import { FiMail, FiLock, FiLogIn } from "react-icons/fi";
-import { Container, Content, Logo, Background } from "./styles";
+import { GiCampingTent } from "react-icons/gi";
+import { Container, Content, Header, Background } from "./styles";
 
 import { Link } from "react-router-dom";
 
-export const SignIn = () => {
+import Switch from "react-switch";
+
+type Props = {
+  toggleTheme: () => void;
+};
+
+export const SignIn = ({ toggleTheme }: Props) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <Container>
       <Content>
-        <Logo>
-          <img src={Vector} />
-          <img src={CampIn} />
-        </Logo>
-        <form action="">
+        <Header>
           <h1>
+            <GiCampingTent size={26}/>
+            camp.ia
+          </h1>
+          <Switch
+            onChange={toggleTheme}
+            checked={theme === themeDark}
+            checkedIcon={false}
+            uncheckedIcon={false}
+            handleDiameter={20}
+            onColor="#999"
+            offColor="#111"
+          />
+        </Header>
+        <form action="">
+          <h2>
             <FiLogIn size={28} />
             Faça seu login
-          </h1>
-          <h2>Entre com suas informações de cadastro.</h2>
+          </h2>
+          <h3>Entre com suas informações de cadastro.</h3>
           <Input Icon={FiMail} title="E-mail" placeholder="Digite seu e-mail" />
           <Input Icon={FiLock} title="Senha" placeholder="Digite sua senha" />
           <div className="remember">

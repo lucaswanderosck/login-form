@@ -11,11 +11,21 @@ export const Container = styled.div`
   }
 `;
 
-export const Logo = styled.div`
+export const Header = styled.div`
   position: absolute;
   top: 0;
   right: 0;
   padding: 42px;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    color: #2e2312;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
 
   @media (max-width: 481px) {
     padding: 16px;
@@ -31,7 +41,7 @@ export const Content = styled.div`
     border-radius: 4px;
     padding: 60px 100px;
 
-    > h1 {
+    > h2 {
       color: ${({ theme }) => theme.colors.textTitle};
       font-family: "Poppins", sans-serif;
       font-size: 24px;
@@ -42,7 +52,7 @@ export const Content = styled.div`
       gap: 12px;
     }
 
-    > h2 {
+    > h3 {
       color: ${({ theme }) => theme.colors.primaryColor};
       font-family: "Roboto", sans-serif;
       font-size: 16px;
