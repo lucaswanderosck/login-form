@@ -19,7 +19,7 @@ export const Container = styled.div`
       width: 100%;
       height: 100%;
       padding: 12px 36px;
-      background: transparent;
+      background: ${({ theme }) => theme.colors.textBase};
 
       &::placeholder {
         color: ${({ theme }) => theme.colors.placeholder};

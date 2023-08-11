@@ -5,6 +5,10 @@ export const Container = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Logo = styled.div`
@@ -12,6 +16,10 @@ export const Logo = styled.div`
   top: 0;
   left: 0;
   padding: 42px;
+
+  @media (max-width: 481px) {
+    padding: 16px;
+  }
 `;
 
 export const Content = styled.div`
@@ -94,10 +102,24 @@ export const Content = styled.div`
         font-weight: bold;
       }
     }
+
+    @media (max-width: 481px) {
+      background: none;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 481px) {
+    place-content: start center;
+    padding-top: 12vh;
   }
 `;
 
 export const Background = styled.div`
   background: url(${backgroundImg}) no-repeat right;
   background-size: cover;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;

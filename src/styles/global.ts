@@ -10,6 +10,11 @@ export default createGlobalStyle`
 body {
     background-color: ${({ theme }) => theme.colors.background};
     -webkit-font-smoothing: antialiased;
+
+    @media (max-width: 481px) {
+        background-color: ${({ theme }) => theme.colors.formBackground};
+
+    }
 }
 
 a {
