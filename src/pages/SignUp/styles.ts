@@ -16,19 +16,26 @@ export const Header = styled.div`
   top: 0;
   right: 0;
   padding: 42px;
-  width: 50vw;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 
   h1 {
-    color: #2e2312;
-    font-family: 'Poppins', sans-serif;
+    color: ${({ theme }) => theme.colors.textTitle};
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   @media (max-width: 481px) {
     padding: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
   }
 `;
 
@@ -50,10 +57,14 @@ export const Content = styled.div`
       display: flex;
       align-items: center;
       gap: 12px;
+
+      svg {
+        color: ${({ theme }) => theme.colors.iconTitle};
+      }
     }
 
     > h3 {
-      color: ${({ theme }) => theme.colors.primaryColor};
+      color: ${({ theme }) => theme.colors.textBase};
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       font-weight: 500;
@@ -62,14 +73,14 @@ export const Content = styled.div`
     }
 
     > p {
-      color: ${({ theme }) => theme.colors.primaryColor};
+      color: ${({ theme }) => theme.colors.buttonLink};
       text-align: center;
       margin-top: 14px;
       font-family: "Poppins", sans-serif;
       font-size: 14px;
 
       > a {
-        color: ${({ theme }) => theme.colors.primaryColor};
+        color: ${({ theme }) => theme.colors.buttonLink};
         font-weight: bold;
       }
     }
@@ -87,7 +98,7 @@ export const Content = styled.div`
 `;
 
 export const Background = styled.div`
-  background: url(${backgroundImg}) no-repeat left;
+  background: url(${backgroundImg}) no-repeat right;
   background-size: cover;
 
   @media (max-width: 1024px) {

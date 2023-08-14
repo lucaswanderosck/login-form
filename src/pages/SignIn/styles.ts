@@ -16,7 +16,7 @@ export const Header = styled.div`
   top: 0;
   left: 0;
   padding: 42px;
-  width: 50vw;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 
@@ -32,6 +32,10 @@ export const Header = styled.div`
 
   @media (max-width: 481px) {
     padding: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
   }
 `;
 
@@ -88,9 +92,7 @@ export const Content = styled.div`
           color: ${({ theme }) => theme.colors.textBase};
           font-family: "Roboto", sans-serif;
           font-size: 16px;
-          font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
       }
 

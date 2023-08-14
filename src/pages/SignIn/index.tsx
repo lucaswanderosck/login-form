@@ -26,7 +26,7 @@ export const SignIn = ({ toggleTheme }: Props) => {
       <Content>
         <Header>
           <h1>
-            <GiCampingTent size={26}/>
+            <GiCampingTent size={26} />
             camp.ia
           </h1>
           <Switch
@@ -35,8 +35,9 @@ export const SignIn = ({ toggleTheme }: Props) => {
             checkedIcon={false}
             uncheckedIcon={false}
             handleDiameter={20}
-            onColor="#999"
-            offColor="#111"
+            onColor="#E4DBCD"
+            onHandleColor="#24221f"
+            offColor="#191816"
           />
         </Header>
         <form action="">
